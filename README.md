@@ -1,9 +1,9 @@
 # Enabling GPUs in the MATLAB docker container
 
-The '--gpus all \' flag in docker_run.sh allows the MATLAB container to access GPUs on the host computer. Follow the instruction below to set up the host computer to enable GPUs in the MATLAB container. The flag can be removed if no GPUs are needed.
+The '--gpus all \' flag in 'docker_run.sh' allows the MATLAB container to access GPUs on the host computer. Follow the instruction below to set up the host computer to enable GPUs in the MATLAB container. The flag can be removed if no GPUs are needed.
 
-# 1 - Check if an Nvidia driver is installed
-Run
+# 1 - Install Nvidia driver
+Check if an Nvidia driver is installed by running
 ```
 nvidia-smi
 ```
@@ -18,8 +18,8 @@ sudo apt install nvidia-driver-<version>
 ```
 Geforce RTX 3080 Ti empirically works fine with nvidia-driver-470
 
-# 2 - Check if Nvidia container toolkit is installed
-Run
+# 2 - Install Nvidia container toolkit
+Check if Nvidia container toolkit is installed by running
 ```
 nvidia-ctk
 ```
