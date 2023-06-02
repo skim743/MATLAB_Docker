@@ -27,14 +27,15 @@
   sudo docker ps -a
   ```
 6. In the second terminal, run 'sudo cp -f /opt/matlab/<MATLAB-version>/VersionInfo.xml /home/matlab/Documents/MATLAB/Toolbox_Installer/<MATLAB-version>/the-only-folder-named-with-date/VersionInfo.xml'
-(ex. sudo cp -f /opt/matlab/R2022a/VersionInfo.xml /home/matlab/Documents/MATLAB/Toolbox_Installer/R2022a/2023_03_13_21_42_01/VersionInfo.xml)
+  (ex. sudo cp -f /opt/matlab/R2022a/VersionInfo.xml /home/matlab/Documents/MATLAB/Toolbox_Installer/R2022a/2023_03_13_21_42_01/VersionInfo.xml)
   - This is a workaround to match the version of the MATLAB in the container and the version of the Toolbox to be installed. Without this step, the installer will throw an error, "To proceed you must select a destination with the following products installed: MATLAB.”
-7. Run 
+7. In the second terminal, run 
 ```
 sudo ./Toolbox_Installer/<MATLAB-version>/the-only-folder-named-with-date/install
 ```
 and complete the installation process
-  - Log into MATLAB account and select the MATLAB license (ex. 621625) as usual- When prompted to enter 'Login Name,' type 'matlab'
+  - Log into MATLAB account and select the MATLAB license (ex. 621625) as usual
+  - When prompted to enter 'Login Name,' type 'matlab'
   - When prompted to 'Select destination folder,' type '/opt/matlab/<MATLAB-version>'
 8. Don’t forget to commit the Docker after the installation
 ```
