@@ -8,7 +8,7 @@ sudo docker run -ti \
 		--net=host \
 		-e DISPLAY=$DISPLAY \
 		-v /tmp/.X11-unix/:/tmp/.X11-unix/:rw \
-		-v ~/git/MATLAB_Docker/license.lic:/licenses/license.lic -e MLM_LICENSE_FILE=/licenses/license.lic \
+		-v ~/git/robotarium_matlab_docker/license.lic:/licenses/license.lic -e MLM_LICENSE_FILE=/licenses/license.lic \
 		-v ~/git/robotarium_matlab_backend:/home/matlab/Documents/MATLAB \
 		mathworks/matlab:full
 		
